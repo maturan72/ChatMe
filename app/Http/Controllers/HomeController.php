@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Users;
+use App\Profiles;
+use App\Messages;
+use DB;
 class HomeController extends Controller
 {
     /**
@@ -23,6 +26,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $profiles = Profiles::all();
+        return view('home')
+        ->with('profiles',$profiles);
     }
+
 }
+  
