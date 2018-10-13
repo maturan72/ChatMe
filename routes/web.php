@@ -17,7 +17,12 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('/redirect', 'SocialAuthGoogleController@redirect');
+Route::get('/callback', 'SocialAuthGoogleController@callback');
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('profile' ,'profileController');
 Route::resource('message' ,'MessageController');
+Route::resource('authenticate' ,'AuthenticateController');
+

@@ -10,6 +10,6 @@ class ApiController extends Controller
      public function UsersApi()
     {
         $data = Users::all();
-        return response()->json($data);;
+        return response()->json($data);
     }
 }
