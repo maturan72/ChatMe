@@ -20,9 +20,6 @@ class SocialAuthGoogleController extends Controller
 
     public function callback()
     {
-      
-      
-        return view('authenticate');
-      
+       return view('authenticate');
     }
 }
