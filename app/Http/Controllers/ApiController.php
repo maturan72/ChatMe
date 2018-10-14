@@ -3,13 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Users;
+use App\User;
 
 class ApiController extends Controller
 {
      public function UsersApi()
     {
-        $data = Users::all();
+        $data = User::all();
         return response()->json($data);
     }
 }
